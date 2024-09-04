@@ -8,7 +8,7 @@ def caesar(encode_or_decode):
             for char in original_text:
                 if char in alphabet:
                     original_index = alphabet.index(char)
-                    new_index = (original_index + shift_amount) % 26
+                    new_index = (original_index + shift_amount) % len(alphabet)
                     encode += alphabet[new_index]
                 else:
                     encode += char
